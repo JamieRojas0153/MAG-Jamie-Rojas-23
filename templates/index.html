@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROI Calculator</title>
+</head>
+<body>
+    <h1>ROI Calculator</h1>
+    <form method="post">
+        <label for="returned_amount">Returned Amount:</label>
+        <input type="text" id="returned_amount" name="returned_amount"><br><br>
+        <label for="invested_amount">Invested Amount:</label>
+        <input type="text" id="invested_amount" name="invested_amount"><br><br>
+        <input type="submit" value="Calculate">
+    </form>
+
+    {% if gain is not none and roi is not none %}
+        <h2>Results:</h2>
+        <p>Gain: {{ gain }}</p>
+        <p>ROI: {{ roi }}%</p>
+    {% endif %}
+</body>
+</html>
